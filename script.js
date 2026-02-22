@@ -1,6 +1,6 @@
 const CONFIG = {
-  casinoUrl: "https://example.com/your-casino-link", // <- твоя реф-ссылка
-  promoCode: "TOWER5",                               // <- твой промокод
+  casinoUrl: "https://1wrrzr.com/v3/5768/tower-rush?p=h9mr", // <- твоя реф-ссылка
+  promoCode: "tower12",                               // <- твой промокод
   countdown: "end_of_month",
 
   pillLeft: "이번 달 출금 진행 중",
@@ -102,4 +102,5 @@ document.querySelectorAll(".shot img").forEach(img => {
   });
 });
 document.getElementById("modalBg").addEventListener("click", closeModal);
+
 document.getElementById("modalClose").addEventListener("click", closeModal);
