@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Tower Rush — 여기서 바로 시작</title>
+  <meta name="theme-color" content="#0b1220"/>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="bg"></div>
+
+  <main class="wrap">
+    <section class="card hero">
+      <!-- top pills -->
+      <div class="topPills">
+        <div class="pill left">
+          <span class="dot"></span>
+          <span id="pillLeft">이번 달 출금 진행 중</span>
+        </div>
+
+        <div class="pill right">
+          <span class="clock">⏳</span>
+          <span class="muted">끝까지</span>
+          <span class="time" id="countdown">00:00:00</span>
+        </div>
+      </div>
+
+      <h1 class="title">
+        <span class="accent">타워</span> 러쉬<br/>
+        <span class="subtitle">여기서 바로 시작</span>
+      </h1>
+
+      <p class="lead">
+        아니요 👇<br/>
+        한 번만 하면 됩니다 → 가입 → 마지막에 코드 입력.
+      </p>
+
+      <!-- steps -->
+      <div class="steps">
+        <div class="step">
+          <div class="stepTop">STEP 1</div>
+          <div class="stepText">
+            아래 <span class="hl">재생 버튼</span><br/>을 누르세요
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="stepTop">STEP 2</div>
+          <div class="stepText">
+            <span class="hl">30초</span> 가입
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="stepTop">STEP 3</div>
+          <div class="stepText">
+            코드 입력<br/><span class="hl" id="stepCode">TOWER5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- promo -->
+      <div class="promo">
+        <div class="promoHead">
+          <span class="gift">🎁</span>
+          <div>
+            <div class="promoTitle" id="promoTitle">첫 입금 최대 500% 보너스</div>
+            <div class="promoSub">프로모 코드 입력 시 적용</div>
+          </div>
+        </div>
+
+        <div class="promoRow">
+          <div class="codeBox">
+            <span class="lock">🔒</span>
+            <span class="codeLabel">코드:</span>
+            <span class="codeValue" id="promoCode">TOWER5</span>
+          </div>
+
+          <button class="btn copy" id="copyBtn">코드 복사</button>
+        </div>
+
+        <div class="promoHint">
+          ✅ 복사 → 가입 시 “프로모 코드”에 붙여넣기
+        </div>
+      </div>
+
+      <!-- accordion with photos -->
+      <details class="accordion" id="photoAccordion">
+        <summary>
+          <span class="pin">📌</span>
+          <span class="accTitle">30초 가입 방법 (사진 포함)</span>
+          <span class="chev">▾</span>
+        </summary>
+
+        <div class="accBody">
+          <ol class="howList">
+            <li>아래 “지금 플레이하기”를 눌러 사이트 이동</li>
+            <li>가입 → 전화번호/이메일 입력</li>
+            <li>프로모에 <b id="howCode">TOWER5</b> 입력</li>
+            <li>바로 플레이 — 완료</li>
+          </ol>
+
+          <!-- horizontal scroller, 2 screenshots -->
+          <div class="shotsWrap">
+            <div class="shots" id="shots">
+              <!-- 파일 넣기: ./assets/step1.jpg , ./assets/step2.jpg -->
+              <figure class="shot">
+                <img src="./assets/step1.jpg" alt="Step 1" loading="lazy" />
+                <figcaption>(1) 프로모 코드 위치</figcaption>
+              </figure>
+
+              <figure class="shot">
+                <img src="./assets/step2.jpg" alt="Step 2" loading="lazy" />
+                <figcaption>(2) 보너스 적용</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="accNote">💡 위 사진대로 따라 하면 됩니다.</div>
+        </div>
+      </details>
+
+      <!-- in-card CTA -->
+      <button class="bigCta" id="ctaInCard">
+        ▶ 지금 플레이하기
+      </button>
+
+      <div class="smallInfo">
+        Instagram에서 안 열리면: 오른쪽 위 메뉴 → “브라우저에서 열기”
+      </div>
+
+      <div class="disclaimer">
+        이 페이지는 안내용입니다. 자세한 조건은 사이트에서 확인하세요.
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky bottom CTA -->
+  <div class="sticky">
+    <button class="stickyMain" id="ctaSticky">▶ 지금 시작 (원클릭)</button>
+    <button class="stickySide" id="copySticky" title="코드 복사">코드</button>
+  </div>
+
+  <!-- image modal (tap to view full) -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modalBg" id="modalBg"></div>
+    <img class="modalImg" id="modalImg" alt="Preview"/>
+    <button class="modalClose" id="modalClose">✕</button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
